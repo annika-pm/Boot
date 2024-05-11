@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bootstrap Web Page</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+      </head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Zoro's Third sword</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="dazai.webp" alt="Dazai">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="megus.jpg" alt="megus">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="gin.jpg" alt="Gintama">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <div id="accordion" class="mt-4">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            About Anime
+          </button>
+        </h5>
+      </div>
+
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body">
+            <p>The word anime is a shortened form of the Japanese word animēshon, which means "animation." While anime has its roots in Japan, it has since spread to other countries, and today, anime can be found in many different languages, including English.
+            </p>
+            <p>There are over 12,000+ anime shows to date.Well, the MAL database has around 11000 anime, including OVA's/ONA's/other stuff.According to the survey, more than 6,000 anime are produced, and more than 3,200 anime are aired on television.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Contact Anime
+          </button>
+        </h5>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+        <div class="card-body">
+          For inquiries, please contact us at 123-456-789.
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+<!-- Modal for the game -->
+<div class="modal fade" id="pokemonModal" tabindex="-1" role="dialog" aria-labelledby="pokemonModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+         <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="pokemonModalLabel">Who's That Character?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img id="animeImage" class="d-block w-100" src="levi.png" alt="Who's That?">
+          <div class="form-group mt-3">
+            <label for="guessInput">Your Guess:</label>
+            <input type="text" class="form-control" id="guessInput" placeholder="Enter Pokémon Name">
+          </div>
+          <p id="errorMessage" class="text-danger mt-2" style="display: none;">WOOOOH!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="checkButton">Check</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <button type="button" class="btn btn-primary mt-4" data-toggle="modal" data-target="#pokemonModal">Who's That character?</button>
+
+  
+  <div class="card-deck mt-4">
+    <div class="card">
+      <img src="dazai1.png" class="card-img-top" alt="Dazai">
+      <div class="card-body">
+        <h5 class="card-title">Dazai</h5>
+        <p class="card-text">Osamu Dazai is a fictional character featured in the manga series Bungo Stray Dogs, written by Kafka Asagiri and drawn by Sango Harukawa. He is a member of the Armed Detective Agency who mentors the protagonist, Atsushi Nakajima, into his group while dealing with other enemies facing them. </p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="zoro.jpg" class="card-img-top" alt="Zoro">
+      <div class="card-body">
+        <h5 class="card-title">Roronoa Zoro </h5>
+        <p class="card-text">Roronoa Zoro, also known as "Pirate Hunter" Zoro, is a fictional character created by Japanese manga artist Eiichiro Oda who appears in the manga series and media franchise One Piece</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="kiki.jpg" class="card-img-top" alt="kiki">
+      <div class="card-body">
+        <h5 class="card-title">Kiki</h5>
+        <p class="card-text">Thirteen-year-old Kiki tries to become an independent witch and gets a job at a delivery service. She wakes up one day to find that she can neither fly her broom nor talk to her cat.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
